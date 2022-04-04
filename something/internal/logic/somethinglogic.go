@@ -26,5 +26,9 @@ func NewSomethingLogic(ctx context.Context, svcCtx *svc.ServiceContext) Somethin
 func (l *SomethingLogic) Something(req types.Request) (resp *types.Response, err error) {
 	// todo: add your logic here and delete this line
 
-	return
+	resp = &types.Response{
+		"你好，" + req.Name,
+	}
+
+	return resp, nil
 }
